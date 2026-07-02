@@ -1,0 +1,11 @@
+# 보안 키 (커밋 금지)
+.env
+
+# 빌드 부산물
+__pycache__/
+*.pyc
+.wrangler/
+node_modules/
+
+# 엑셀 임시 잠금파일
+~$*
