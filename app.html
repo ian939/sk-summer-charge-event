@@ -183,7 +183,7 @@
 <body>
 <div id="map"></div>
 
-<div id="legend"><span>충전 1건당 응모권</span><span class="lg-b"><svg viewBox="0 0 24 24" fill="#fff"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg></span><span>1장</span><span class="lg-sep">|</span><span class="lg-plan"></span><span>설치예정</span></div>
+<div id="legend"><span class="lg-b"><svg viewBox="0 0 24 24" fill="#fff"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg></span><span>이벤트 대상 충전소</span><span class="lg-sep">|</span><span class="lg-plan"></span><span>설치예정</span></div>
 
 <div id="search">
   <button id="openSearch">경로 찾기</button>
@@ -518,7 +518,7 @@ function openSheet(d){
   const badges = [
     d.region ? `<span class="badge">${d.region}</span>` : "",
     d.price ? `<span class="badge price">${d.price}원/kWh</span>` : "",
-    d.planned ? "" : `<span class="badge tkt">응모권 1장</span>`,
+    d.planned ? "" : `<span class="badge tkt">이벤트 대상</span>`,
   ].filter(Boolean).join("");
   let mid;
   if(d.planned){
