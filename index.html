@@ -1,4 +1,4 @@
-<!-- 여름 고속도로 바캉스 이벤트 랜딩 — 경로 탐색 지도앱을 iframe으로 임베드 (PPTX 기획 정렬본) -->
+<!-- SK일렉링크 고속도로 프로모션 허브 — 1차/2차 프로모션 + 경로찾기 진입 -->
 <!DOCTYPE html>
 <html lang="ko">
 <head>
@@ -6,213 +6,73 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="color-scheme" content="light">
 <meta name="theme-color" content="#ffffff">
-<title>여름 고속도로 바캉스 · SK일렉링크</title>
+<title>SK일렉링크 고속도로 프로모션</title>
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css">
 <style>
-  :root{
-    color-scheme:only light;
-    --pp:#783CFC;--pp-d:#6C34E0;--pp-l:#9C6CFC;--pp100:#EDE4FF;
-    --gold:#F0A800;--gold-d:#C77700;--amber:#FF9D2E;--sun:#FF7847;
-    --ink:#1A1A1A;--ink2:#8E8E93;--line:#ECECEE;--page:#F4F4F6;--card:#fff;--green:#1FBF73;
-  }
+  :root{ color-scheme:only light;
+    --pp:#783CFC;--pp-d:#6C34E0;--pp100:#EDE4FF;--gold:#F0A800;--gold-d:#9A6B00;
+    --ink:#1A1A1A;--ink2:#6b6577;--ink3:#9a94a6;--line:#ECECEE;--page:#F4F4F6;--card:#fff; }
   *{box-sizing:border-box}
-  html{scroll-behavior:smooth}
   body{margin:0;background:var(--page);color:var(--ink);
     font-family:"Pretendard","Pretendard Variable","Noto Sans KR",-apple-system,system-ui,sans-serif;
-    line-height:1.6;-webkit-font-smoothing:antialiased;word-break:keep-all;overflow-wrap:break-word}
-  @keyframes floatY{0%,100%{transform:translateY(0)}50%{transform:translateY(-9px)}}
-  .wrap{max-width:1080px;margin:0 auto;padding:0 24px}
-  .g3{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
-  .cta{display:inline-flex;align-items:center;gap:8px;background:var(--pp);color:#fff;font-weight:800;font-size:16px;
-    padding:15px 26px;border-radius:14px;text-decoration:none;transition:background .15s,transform .15s;border:0;cursor:pointer;font-family:inherit}
-  .cta:hover{background:var(--pp-d);transform:translateY(-1px)}
-  .faq details{border-bottom:1px solid var(--line)}
-  .faq summary{cursor:pointer;font-weight:700;font-size:16px;padding:18px 0;list-style:none;display:flex;justify-content:space-between;align-items:center;gap:16px}
-  .faq summary::-webkit-details-marker{display:none}
-  .faq summary::after{content:"+";color:var(--pp);font-size:24px;font-weight:400;line-height:1}
-  .faq details[open] summary::after{content:"–"}
-  .faq p{margin:0 0 18px;color:var(--ink2);font-size:14.5px}
-  @media (max-width:860px){ .g3{grid-template-columns:1fr} .heroG{grid-template-columns:1fr!important;gap:30px!important} }
-  @media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important;scroll-behavior:auto!important}}
+    line-height:1.6;-webkit-font-smoothing:antialiased;word-break:keep-all}
+  .wrap{max-width:940px;margin:0 auto;padding:0 22px}
+  header{padding:56px 0 8px}
+  .eyebrow{font-size:12.5px;font-weight:800;letter-spacing:.12em;text-transform:uppercase;color:var(--pp)}
+  h1{font-size:clamp(28px,4.6vw,40px);font-weight:800;letter-spacing:-.025em;margin:12px 0 8px;line-height:1.15}
+  .sub{font-size:16px;color:var(--ink2);margin:0;max-width:60ch}
+  .cards{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:34px}
+  .card{display:flex;flex-direction:column;background:var(--card);border:1px solid var(--line);border-radius:20px;
+    padding:24px;text-decoration:none;color:inherit;transition:transform .12s,box-shadow .12s,border-color .12s}
+  .card:hover{transform:translateY(-3px);box-shadow:0 12px 32px rgba(120,60,252,.14);border-color:var(--pp)}
+  .card .badge{align-self:flex-start;font-size:12px;font-weight:800;border-radius:999px;padding:5px 12px}
+  .b1{background:var(--pp100);color:var(--pp-d)} .b2{background:#FFF3D6;color:var(--gold-d)}
+  .card h2{font-size:20px;font-weight:800;letter-spacing:-.02em;margin:16px 0 6px;line-height:1.3}
+  .card p{font-size:14px;color:var(--ink2);margin:0 0 20px;flex:1}
+  .card .go{font-size:15px;font-weight:800;color:var(--pp);display:inline-flex;align-items:center;gap:6px}
+  .finder{grid-column:1 / -1;flex-direction:row;align-items:center;gap:18px;
+    background:linear-gradient(120deg,#783CFC,#9C6CFC);border:0;color:#fff}
+  .finder:hover{box-shadow:0 12px 32px rgba(120,60,252,.3)}
+  .finder .ic{flex:0 0 auto;width:52px;height:52px;border-radius:14px;background:rgba(255,255,255,.18);display:grid;place-items:center}
+  .finder h2{margin:0;color:#fff}
+  .finder p{margin:4px 0 0;color:#EFE7FF;flex:1}
+  .finder .go{color:#fff}
+  footer{margin-top:44px;padding:26px 0 60px;border-top:1px solid var(--line);color:var(--ink3);font-size:13px}
+  @media(max-width:720px){ .cards{grid-template-columns:1fr} .finder{flex-direction:row} }
 </style>
 </head>
 <body>
+  <header class="wrap">
+    <div class="eyebrow">SK일렉링크 · 고속도로 프로모션</div>
+    <h1>진행 중인 프로모션</h1>
+    <p class="sub">보실 프로모션을 선택하세요. 여름 바캉스 이벤트에서는 내 경로 위 SK일렉링크 휴게소 충전소도 바로 찾아볼 수 있어요.</p>
+  </header>
 
-<!-- ===== 상단 미니 헤더 ===== -->
-<div style="position:sticky;top:0;z-index:50;background:rgba(255,255,255,.86);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)">
-  <div class="wrap" style="display:flex;align-items:center;gap:12px;padding:12px 24px">
-    <span style="width:30px;height:30px;border-radius:9px;background:var(--pp);display:grid;place-items:center;flex:0 0 auto"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon></svg></span>
-    <span style="font-weight:800;font-size:15px;letter-spacing:-.01em">SK일렉링크<span style="color:var(--ink2);font-weight:600"> · 여름 고속도로 바캉스</span></span>
-  </div>
-</div>
-
-<!-- ===== 히어로 ===== -->
-<header style="padding:48px 0 58px">
-  <div class="wrap heroG" style="display:grid;grid-template-columns:1.12fr .88fr;gap:48px;align-items:center">
-    <div>
-      <span style="display:inline-flex;align-items:center;gap:7px;font-size:12.5px;font-weight:700;color:var(--pp);background:var(--pp100);padding:6px 13px;border-radius:999px">2026 여름 캠페인 · 고속도로 휴게소</span>
-      <h1 style="font-size:clamp(30px,4.8vw,50px);line-height:1.14;font-weight:800;letter-spacing:-.025em;margin:18px 0 0">여름 고속도로 바캉스!<br>이번 여름 휴가, <span style="color:var(--pp)">SK일렉링크가 쏜다</span></h1>
-      <p style="font-size:clamp(16px,2vw,18px);color:#55555c;max-width:500px;margin:16px 0 0">휴양지로 가는 길에 <b style="color:var(--ink)">충전만 하면, 휴가 지원금 추첨까지.</b> 출발지·목적지만 정하면 경로 위 SK일렉링크 휴게소 충전소가 한눈에.</p>
-      <div style="display:flex;gap:8px;align-items:center;margin-top:20px;font-size:12.5px;color:var(--ink2)">
-        <span style="background:#FFF3DB;color:var(--gold-d);font-weight:700;padding:5px 12px;border-radius:999px">이벤트 기간 2026.7.27 ~ 8.21</span>
-      </div>
-      <div style="margin-top:28px">
-        <a href="#finder" class="cta">내 경로에서 충전소 확인하기 <span>→</span></a>
-      </div>
-    </div>
-
-    <!-- 골드 천공 응모권 비주얼 -->
-    <div style="display:flex;justify-content:center">
-      <div style="position:relative;width:288px;animation:floatY 5s ease-in-out infinite">
-        <div style="background:linear-gradient(140deg,#FFC24D,#F0A800);border-radius:22px;padding:28px 24px;color:#3a2600;box-shadow:0 24px 54px rgba(240,168,0,.34)">
-          <div style="display:flex;justify-content:space-between;align-items:center;font-size:12px;font-weight:800;letter-spacing:.14em">
-            <span>RAFFLE</span><span>NO. ∞</span>
-          </div>
-          <div style="font-size:14px;font-weight:700;margin-top:26px;opacity:.85">여름 휴가 경품</div>
-          <div style="font-size:34px;font-weight:800;line-height:1.08;margin-top:4px;letter-spacing:-.02em">최대<br>100만원<br>여행상품권</div>
-          <div style="position:relative;margin:22px -24px 18px;height:1px">
-            <div style="position:absolute;left:16px;right:16px;top:0;border-top:2px dashed rgba(58,38,0,.4)"></div>
-            <div style="position:absolute;left:-12px;top:-11px;width:24px;height:24px;border-radius:50%;background:var(--page)"></div>
-            <div style="position:absolute;right:-12px;top:-11px;width:24px;height:24px;border-radius:50%;background:var(--page)"></div>
-          </div>
-          <div style="display:flex;justify-content:space-between;align-items:center;font-size:13px;font-weight:700;padding:0 24px;margin:0 -24px">
-            <span style="opacity:.8">휴게소 충전</span>
-            <span style="background:#3a2600;color:var(--gold);padding:4px 11px;border-radius:999px;font-size:11.5px">추첨 응모</span>
-          </div>
-        </div>
-        <div style="position:absolute;inset:0;background:var(--pp);border-radius:22px;transform:rotate(-6deg) translate(-15px,13px);z-index:-1;opacity:.16"></div>
-      </div>
-    </div>
-  </div>
-</header>
-
-<!-- ===== 경품 ===== -->
-<div class="wrap" style="padding:8px 24px 8px">
-  <div style="max-width:640px">
-    <span style="font-size:12.5px;font-weight:700;color:var(--pp)">REWARD</span>
-    <h2 style="font-size:clamp(24px,3.2vw,32px);font-weight:800;letter-spacing:-.02em;margin:8px 0 0">여정을 따라 이어지는 3단계 경품</h2>
-    <p style="color:var(--ink2);font-size:15px;margin:8px 0 0">가는 길엔 충전, 받는 건 휴가예요. 1·2위는 진짜 떠나는 여행상품권, 3위는 여행 뒤 나를 위한 든든한 한 끼까지 챙겨드려요.</p>
-  </div>
-  <div class="g3" style="margin-top:24px">
-    <!-- 1위 -->
-    <div style="background:linear-gradient(180deg,#FFFdf5,#FFF3D6);border:1px solid #EBCF7A;border-radius:18px;padding:24px;position:relative">
-      <span style="display:inline-block;font-size:12px;font-weight:800;color:var(--gold-d);background:#fff;border:1px solid #EBCF7A;border-radius:999px;padding:3px 10px">🥇 1위 · 1명</span>
-      <div style="font-size:15px;font-weight:700;color:var(--ink2);margin-top:14px">하나투어 여행상품권</div>
-      <div style="font-size:30px;font-weight:800;letter-spacing:-.02em;margin-top:2px">100만원권</div>
-      <div style="font-size:12.5px;color:var(--ink2);margin-top:6px">국내·해외 패키지 / 항공 / 리조트 · 유효기간 5년</div>
-      <div style="font-size:13px;font-weight:600;color:var(--gold-d);margin-top:12px">“충전만 했을 뿐인데 온 가족 해외여행이라니! 올여름, 어디로 떠나볼까요? ✈️”</div>
-    </div>
-    <!-- 2위 -->
-    <div style="background:#fff;border:1px solid var(--line);border-radius:18px;padding:24px">
-      <span style="display:inline-block;font-size:12px;font-weight:800;color:var(--pp);background:var(--pp100);border-radius:999px;padding:3px 10px">🥈 2위 · 1명</span>
-      <div style="font-size:15px;font-weight:700;color:var(--ink2);margin-top:14px">하나투어 여행상품권</div>
-      <div style="font-size:30px;font-weight:800;letter-spacing:-.02em;margin-top:2px">50만원권</div>
-      <div style="font-size:12.5px;color:var(--ink2);margin-top:6px">국내·해외 여행 자유 사용 · 유효기간 5년</div>
-      <div style="font-size:13px;font-weight:600;color:var(--pp);margin-top:12px">“주말 호캉스도, 제주 한 바퀴도 가볍게. 이제 ‘어디 가지?’ 행복한 고민만 남았어요 🏖️”</div>
-    </div>
-    <!-- 3위 -->
-    <div style="background:#fff;border:1px solid var(--line);border-radius:18px;padding:24px">
-      <span style="display:inline-block;font-size:12px;font-weight:800;color:var(--pp);background:var(--pp100);border-radius:999px;padding:3px 10px">🥉 3위 · 20명</span>
-      <div style="font-size:15px;font-weight:700;color:var(--ink2);margin-top:14px">배달의민족 상품권</div>
-      <div style="font-size:30px;font-weight:800;letter-spacing:-.02em;margin-top:2px">5만원권</div>
-      <div style="font-size:12.5px;color:var(--ink2);margin-top:6px">다수 당첨 · 앱으로 즉시 발송</div>
-      <div style="font-size:13px;font-weight:600;color:var(--pp);margin-top:12px">“여행에 지친 몸과 마음, 삼계탕 배달로 몸보신 한번 어떠세요? 배달의민족으로 든든하게 🍗”</div>
-    </div>
-  </div>
-  <p style="font-size:12.5px;color:var(--ink2);margin:12px 2px 0">＊ 여행상품권은 국내·해외 여행에 사용, 유효기간 5년. 당첨자 발표·지급 상세는 추후 공지.</p>
-</div>
-
-<!-- ===== 참여 방법 ===== -->
-<div class="wrap" style="padding:52px 24px 8px">
-  <div style="max-width:640px">
-    <span style="font-size:12.5px;font-weight:700;color:var(--pp)">HOW IT WORKS</span>
-    <h2 style="font-size:clamp(24px,3.2vw,32px);font-weight:800;letter-spacing:-.02em;margin:8px 0 0">참여 방법</h2>
-  </div>
-  <div class="g3" style="margin-top:28px">
-    <div style="background:#fff;border:1px solid var(--line);border-radius:16px;padding:24px">
-      <div style="width:44px;height:44px;border-radius:12px;background:var(--pp);color:#fff;display:grid;place-items:center;font-weight:800;font-size:17px">01</div>
-      <h3 style="font-size:18px;font-weight:800;margin:16px 0 6px">앱에서 이벤트 참여하기</h3>
-      <p style="color:var(--ink2);font-size:14.5px;margin:0">SK일렉링크 앱 이벤트 페이지에서 <b style="color:var(--ink)">[응모하기]</b>를 누르면 참여 완료. (혜택·이벤트 알림 동의 필요)</p>
-    </div>
-    <div style="background:#fff;border:1px solid var(--line);border-radius:16px;padding:24px">
-      <div style="width:44px;height:44px;border-radius:12px;background:var(--pp);color:#fff;display:grid;place-items:center;font-weight:800;font-size:17px">02</div>
-      <h3 style="font-size:18px;font-weight:800;margin:16px 0 6px">내 경로에서 충전소 확인</h3>
-      <p style="color:var(--ink2);font-size:14.5px;margin:0">하계 휴가 경로를 넣으면 경로 위 SK일렉링크 휴게소 충전소를 한눈에 볼 수 있어요.</p>
-    </div>
-    <div style="background:#fff;border:1px solid var(--line);border-radius:16px;padding:24px">
-      <div style="width:44px;height:44px;border-radius:12px;background:var(--gold);color:#3a2600;display:grid;place-items:center;font-weight:800;font-size:17px">03</div>
-      <h3 style="font-size:18px;font-weight:800;margin:16px 0 6px">휴게소에서 충전하면 끝!</h3>
-      <p style="color:var(--ink2);font-size:14.5px;margin:0">이벤트 기간 내 고속도로 SK일렉링크 휴게소에서 충전하고, 휴가 지원금 추첨을 기다리세요.</p>
-    </div>
-  </div>
-</div>
-
-<!-- ===== 경로 탐색 (지도앱 임베드) ===== -->
-<div id="finder" class="wrap" style="padding:52px 24px 8px;scroll-margin-top:64px">
-  <div style="max-width:640px;margin-bottom:24px">
-    <span style="font-size:12.5px;font-weight:700;color:var(--pp)">경로 탐색</span>
-    <h2 style="font-size:clamp(24px,3.2vw,32px);font-weight:800;letter-spacing:-.02em;margin:8px 0 8px">내 경로에서 충전소 확인하기</h2>
-    <p style="color:var(--ink2);font-size:15.5px;margin:0">경로상의 SK일렉링크 휴게소와 충전기 용량·메뉴·리뷰를 확인하세요.</p>
-  </div>
-  <div style="background:#fff;border:1px solid var(--line);border-radius:16px;box-shadow:0 1px 2px rgba(26,26,26,.04),0 2px 8px rgba(26,26,26,.05);overflow:hidden">
-    <iframe src="app.html" title="경로 위 SK일렉링크 충전소 찾기" loading="lazy" style="display:block;width:100%;height:490px;border:0"></iframe>
-    <div style="padding:13px 18px;border-top:1px solid var(--line);font-size:12px;color:var(--ink2);background:#FAFAFB">경로 위 SK일렉링크 휴게소 충전소를 실시간으로 찾아봐요.</div>
-  </div>
-</div>
-
-<!-- ===== 통계 ===== -->
-<div class="wrap" style="padding:44px 24px 8px">
-  <div class="g3">
-    <div style="background:#fff;border:1px solid var(--line);border-radius:16px;padding:22px">
-      <div style="font-size:32px;font-weight:800;letter-spacing:-.02em">약 90<span style="font-size:15px;color:var(--ink2);font-weight:700"> 개소</span></div>
-      <div style="font-size:13.5px;color:var(--ink2);margin-top:4px">전국 고속도로 SK일렉링크 휴게소 충전소 (설치예정 포함)</div>
-    </div>
-    <div style="background:#fff;border:1px solid var(--line);border-radius:16px;padding:22px">
-      <div style="font-size:32px;font-weight:800;letter-spacing:-.02em">약 380<span style="font-size:15px;color:var(--ink2);font-weight:700"> 기</span></div>
-      <div style="font-size:13.5px;color:var(--ink2);margin-top:4px">휴게소 급속 충전기 (설치예정 포함)</div>
-    </div>
-    <div style="background:#fff;border:1px solid var(--line);border-radius:16px;padding:22px">
-      <div style="font-size:22px;font-weight:800;letter-spacing:-.02em;color:var(--pp)">민간 최초·최대</div>
-      <div style="font-size:13.5px;color:var(--ink2);margin-top:4px">고속도로 휴게소 충전 운영</div>
-    </div>
-  </div>
-</div>
-
-<!-- ===== 유의사항 (PPTX 정식 전문) ===== -->
-<div class="wrap" style="padding:36px 24px 8px">
-  <div style="background:var(--page);border:1px solid var(--line);border-radius:16px;padding:26px 30px">
-    <h3 style="margin:0 0 12px;font-size:17px;font-weight:800">꼭 확인해 주세요!</h3>
-
-    <div style="font-size:13px;font-weight:800;color:var(--pp);margin:8px 0 6px">참여 안내</div>
-    <ul style="margin:0 0 14px;padding-left:18px;color:var(--ink2);font-size:13.5px;line-height:1.8">
-      <li>이벤트 참여를 위하여 혜택 및 이벤트 알림 동의를 반드시 해주세요.</li>
-      <li>본 이벤트는 반드시 최신 버전의 SK일렉링크 App에서 참여해 주세요.</li>
-      <li>이벤트 기간 내 <b style="color:var(--ink)">[응모하기] 버튼을 누른 고객</b>에 한해 정상 참여로 인정됩니다.</li>
-      <li>현대 럭키패스 H, 기아 그린패스 가입 고객은 고속도로 충전 요금 할인은 적용되지 않으나, 이벤트 참여 및 경품 추첨 대상에는 포함됩니다.</li>
-      <li>부정한 방법으로 참여한 사실이 확인될 경우 당첨이 취소될 수 있습니다.</li>
-    </ul>
-
-    <div style="font-size:13px;font-weight:800;color:var(--pp);margin:8px 0 6px">경품 지급 안내</div>
-    <ul style="margin:0 0 14px;padding-left:18px;color:var(--ink2);font-size:13.5px;line-height:1.8">
-      <li>경품은 SK일렉링크 App에 등록된 회원정보(휴대전화번호 혹은 주소)로 발송됩니다. 잘못된 정보로 인한 오발송은 책임지지 않으니, 참여 전 반드시 회원정보를 최신화 해주세요.</li>
-      <li>이벤트 경품은 중복 지급이 불가능하며, 타인 양도 및 타 상품 교환이 불가합니다.</li>
-      <li><b style="color:var(--ink)">5만원 초과 경품의 제세공과금 22%는 본인 부담</b>입니다. 당첨 시 신고를 위해 개인정보를 요청할 수 있으며, 거부 혹은 미납 시 당첨이 취소될 수 있습니다.</li>
-    </ul>
-
-    <div style="font-size:13px;font-weight:800;color:var(--pp);margin:8px 0 6px">기타</div>
-    <ul style="margin:0;padding-left:18px;color:var(--ink2);font-size:13.5px;line-height:1.8">
-      <li>본 이벤트는 당사의 사정에 의해 별도의 사전 고지 없이 변경되거나 종료될 수 있습니다.</li>
-    </ul>
-  </div>
-</div>
-
-<!-- ===== 푸터 ===== -->
-<footer style="background:#1A1A1A;color:#9A9AA2;padding:36px 0;font-size:13px;margin-top:36px">
   <div class="wrap">
-    <b style="color:#fff">SK일렉링크</b> · 국내 급속 충전 1위 · 고객센터 1566-1704<br>
-    <span style="display:inline-block;margin-top:8px">본 페이지는 프로모션 기획 시안이에요. 경품·기간·수치는 확정 전 자리표시자입니다.</span>
+    <div class="cards">
+      <a class="card" href="view1.html">
+        <span class="badge b1">1차 프로모션</span>
+        <h2>고속도로 첫 충전<br>일렉링크 포인트 환급</h2>
+        <p>고속도로 휴게소 첫 충전 고객에게 일렉링크 포인트를 환급해 드리는 프로모션 (Ver.2).</p>
+        <span class="go">페이지 보기 →</span>
+      </a>
+      <a class="card" href="view2.html">
+        <span class="badge b2">2차 프로모션</span>
+        <h2>여름 고속도로 바캉스<br>충전 지원금 추첨</h2>
+        <p>휴양지로 가는 길에 휴게소에서 충전만 하면 충전 지원금 추첨까지! (2026.7.27~8.21)</p>
+        <span class="go">페이지 보기 →</span>
+      </a>
+      <a class="card finder" href="app.html">
+        <span class="ic"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon></svg></span>
+        <div style="flex:1">
+          <h2>내 경로에서 충전소 찾기</h2>
+          <p>출발지·도착지를 넣으면 경로 위 SK일렉링크 휴게소 충전소를 지도에서 확인할 수 있어요.</p>
+        </div>
+        <span class="go">지도 열기 →</span>
+      </a>
+    </div>
   </div>
-</footer>
 
+  <footer class="wrap"><b style="color:var(--ink2)">SK일렉링크</b> · 국내 급속 충전 1위 · 고객센터 1566-1704</footer>
 </body>
 </html>

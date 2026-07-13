@@ -1,0 +1,32 @@
+<!-- 2차 프로모션(여름 바캉스) 뷰 래퍼 — 상단 내비 + 원본 promo2.html iframe -->
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="light">
+<title>2차 · 여름 고속도로 바캉스 · SK일렉링크</title>
+<style>
+  :root{color-scheme:only light}
+  *{box-sizing:border-box} html,body{margin:0;height:100%}
+  body{font-family:"Pretendard","Noto Sans KR",system-ui,sans-serif;background:#fff}
+  #nav{position:fixed;top:0;left:0;right:0;height:52px;z-index:10;display:flex;align-items:center;gap:10px;
+    padding:0 14px;background:rgba(255,255,255,.92);backdrop-filter:blur(8px);border-bottom:1px solid #ECECEE}
+  #nav a{text-decoration:none;font-size:13.5px;font-weight:700;border-radius:10px;padding:9px 13px}
+  #nav .home{color:#6b6577;background:#F4F4F6}
+  #nav .home:hover{background:#e8e6ee}
+  #nav .title{flex:1;text-align:center;font-size:13.5px;font-weight:800;color:#1A1A1A;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+  #nav .finder{color:#fff;background:#783CFC}
+  #nav .finder:hover{background:#6C34E0}
+  iframe{position:fixed;top:52px;left:0;right:0;bottom:0;width:100%;height:calc(100% - 52px);border:0;display:block}
+</style>
+</head>
+<body>
+  <div id="nav">
+    <a class="home" href="index.html">← 프로모션</a>
+    <span class="title">2차 · 여름 고속도로 바캉스</span>
+    <a class="finder" href="app.html">🔌 경로찾기</a>
+  </div>
+  <iframe src="promo2.html" title="2차 프로모션 · 여름 고속도로 바캉스" loading="lazy"></iframe>
+</body>
+</html>
